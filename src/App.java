@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.sun.java.swing.ui.StatusBar;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -79,6 +81,10 @@ public class App {
 		for (Integer id : ids) {
 			idsBuilder.append(id + "-");
 		}
+		if (idsBuilder.charAt(idsBuilder.length() - 1) == '-') {
+			idsBuilder.setLength(idsBuilder.length() - 1);			
+		}
+
 		
 		/* 
 		 * ********************
